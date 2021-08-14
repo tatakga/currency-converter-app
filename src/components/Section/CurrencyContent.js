@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, MenuItem, TextField, Button } from "@material-ui/core";
 import useGetAllCurrency from "../../hooks/useGetAllCurrency";
-import currencyFormStyles from "./CurrencyFormStyles";
+import useStyles from "./CurrencyFormStyles";
 import { Result } from "../Footer/Result";
 
 export const CurrencyContent = () => {
@@ -22,14 +22,14 @@ export const CurrencyContent = () => {
     getResult(from, to, amount);
   };
 
-  const classes = currencyFormStyles();
+  const classes = useStyles();
   return (
     <Container maxWidth="sm">
       <Result result={result} />
 
       <form onSubmit={handleSubmit}>
-        <TextField className={classes.input_amount} label="Amount :" variant="outlined" value={amount} onChange={(e) => setAmount(e.target.value)} />
-        <div className={classes.select_container}>
+        <TextField className={classes.inputAmount} label="Amount :" variant="outlined" value={amount} onChange={(e) => setAmount(e.target.value)} />
+        <div className={classes.selectContainer}>
           <TextField select label="From :" value={from} variant="outlined" onChange={(e) => setFrom(e.target.value)}>
             {loading && <MenuItem>Fetching data ...</MenuItem>}
             {symbols &&
@@ -49,7 +49,7 @@ export const CurrencyContent = () => {
               ))}
           </TextField>
         </div>
-        <Button type="submit" className={classes.button_convert}>
+        <Button type="submit" className={classes.buttonConvert}>
           Convert
         </Button>
       </form>

@@ -1,16 +1,23 @@
-import { makeStyles } from "@material-ui/core";
+import { AppBar, CssBaseline, Toolbar, Typography, Container } from "@material-ui/core";
+import { MonetizationOn } from "@material-ui/icons";
+import useStyles from "./HeaderStyles";
+import React from "react";
 
-const headerStyles = makeStyles(() => ({
-  header_section: {
-    backgroundColor: "#fff",
-    color: "#263238",
-    boxShadow: "none",
-    borderBottom: "solid 1px #263238",
-    marginBottom: "4rem",
-  },
-  header_icon: {
-    marginRight: "6px",
-  },
-}));
+const Header = () => {
+  const classes = useStyles();
+  return (
+    <div className="header">
+      <CssBaseline />
+      <AppBar position="static" className={classes.headerSection}>
+        <Container maxWidth="md">
+          <Toolbar>
+            <MonetizationOn className={classes.headerIcon} />
+            <Typography variant="h6">Currency Converter</Typography>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </div>
+  );
+};
 
-export default headerStyles;
+export default Header;

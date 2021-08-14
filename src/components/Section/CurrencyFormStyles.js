@@ -1,17 +1,17 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
-const currencyFormStyles = makeStyles(() => ({
-  input_amount: {
+const useStyles = makeStyles(() => ({
+  inputAmount: {
     width: "100%",
     marginBottom: "28px",
   },
-  select_container: {
+  selectContainer: {
     display: "grid",
     gridTemplateColumns: "repeat(2, 1fr)",
     gap: "8px",
     marginBottom: "28px",
   },
-  button_convert: {
+  buttonConvert: {
     fontSize: "1rem",
     backgroundColor: "#03a9f4",
     color: "#ffffff",
@@ -24,4 +24,4 @@ const currencyFormStyles = makeStyles(() => ({
   },
 }));
 
-export default currencyFormStyles;
+export default useStyles;

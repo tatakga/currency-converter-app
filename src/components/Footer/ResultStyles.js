@@ -1,10 +1,10 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
-const resultStyles = makeStyles(() => ({
-  result_container: {
+const useStyles = makeStyles(() => ({
+  resultContainer: {
     marginBottom: "32px",
   },
-  result_text: {
+  resultText: {
     width: "100%",
     border: "none",
     outline: "none",
@@ -15,4 +15,4 @@ const resultStyles = makeStyles(() => ({
   },
 }));
 
-export default resultStyles;
+export default useStyles;

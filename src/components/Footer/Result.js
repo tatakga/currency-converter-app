@@ -1,12 +1,12 @@
 import React from "react";
 import { TextField } from "@material-ui/core";
-import resultStyles from "./ResultStyles";
+import useStyles from "./ResultStyles";
 
 export const Result = ({ result }) => {
-  const classes = resultStyles();
+  const classes = useStyles();
   return (
-    <div className={classes.result_container}>
-      <TextField label="Result :" className={classes.result_text} value={result ? result : 0} InputProps={{ readOnly: true }} variant="outlined"></TextField>
+    <div className={classes.resultContainer}>
+      <TextField label="Result :" className={classes.resultText} value={result ? result : 0} InputProps={{ readOnly: true }} variant="outlined"></TextField>
     </div>
   );
 };
